@@ -1,5 +1,5 @@
-create database if not exists experthelp;
-USE experthelp;
+create database if not exists expertexchange;
+USE expertexchange;
 
 create table if not exists companies (
     ID int not null AUTO_INCREMENT,     -- Firmen ID zur uniquisierung

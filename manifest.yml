@@ -1,6 +1,5 @@
 applications:
-   - name: expertexchange
-     random-route: true
+   - name: exex
      path: service/target/service.jar
      memory: 256M
      instances: 1

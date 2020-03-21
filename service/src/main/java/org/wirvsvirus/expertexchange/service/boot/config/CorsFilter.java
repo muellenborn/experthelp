@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.wirvscvirus.expertexchange.service.boot.config;
+package org.wirvsvirus.expertexchange.service.boot.config;
 
 import java.io.IOException;
 

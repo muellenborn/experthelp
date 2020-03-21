@@ -1,4 +1,4 @@
-package org.wirvscvirus.expertexchange.service.boot.config;
+package org.wirvsvirus.expertexchange.service.boot.config;
 
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;

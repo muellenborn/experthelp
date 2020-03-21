@@ -1,4 +1,4 @@
-package org.wirvscvirus.expertexchange.service.util;
+package org.wirvsvirus.expertexchange.service.util;
 
 import java.io.IOException;
 import java.util.Collections;

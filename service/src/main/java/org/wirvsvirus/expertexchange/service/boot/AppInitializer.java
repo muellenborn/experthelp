@@ -1,4 +1,4 @@
-package org.wirvscvirus.expertexchange.service.boot;
+package org.wirvsvirus.expertexchange.service.boot;
 
 import org.springframework.boot.Banner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConf
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-@SpringBootApplication(exclude = ErrorMvcAutoConfiguration.class)
+@SpringBootApplication(scanBasePackages = "org.wirvsvirus", exclude = ErrorMvcAutoConfiguration.class)
 public class AppInitializer extends SpringBootServletInitializer {
 	public AppInitializer() {
 		setRegisterErrorPageFilter(false);

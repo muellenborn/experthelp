@@ -1,4 +1,4 @@
-package org.wirvscvirus.expertexchange.service.boot.config;
+package org.wirvsvirus.expertexchange.service.boot.config;
 
 import java.nio.charset.StandardCharsets;
 import java.util.EnumSet;
@@ -10,7 +10,6 @@ import org.springframework.boot.autoconfigure.web.servlet.DispatcherServletRegis
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.filter.CharacterEncodingFilter;
@@ -21,7 +20,6 @@ import org.springframework.web.servlet.DispatcherServlet;
  * @author bahlef
  */
 @Configuration
-@ComponentScan(basePackages = "org.wirvscvirus.expertexchange")
 public class WebAppContextConfig {
 	@Bean
 	public DispatcherServletRegistrationBean dispatcherServletRegistration(WebApplicationContext context) {

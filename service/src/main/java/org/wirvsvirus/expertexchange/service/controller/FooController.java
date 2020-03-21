@@ -1,4 +1,4 @@
-package org.wirvscvirus.expertexchange.service.controller;
+package org.wirvsvirus.expertexchange.service.controller;
 
 import java.time.LocalDate;
 

@@ -1,0 +1,21 @@
+info:
+  app:
+    name: Expert Exchange Service
+
+management:
+  endpoints:
+    web:
+      base-path: /expert-exchange/v1
+
+server:
+  servlet:
+    context-path: /
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json,image/svg+xml
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 1000MB

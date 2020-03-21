@@ -21,7 +21,7 @@ import org.springframework.web.servlet.DispatcherServlet;
  * @author bahlef
  */
 @Configuration
-@ComponentScan(basePackages = "org.wirvsvirus.expertexchange")
+@ComponentScan(basePackages = "org.wirvscvirus.expertexchange")
 public class WebAppContextConfig {
 	@Bean
 	public DispatcherServletRegistrationBean dispatcherServletRegistration(WebApplicationContext context) {

@@ -2,11 +2,15 @@ package org.wirvscvirus.expertexchange.service.model;
 
 import java.util.List;
 
-public class KnowHowCategory {
+/**
+ * Category class either for know how categories and also for ressource categories.
+ */
+
+public class Category {
 
     private String id;
     private String name;
-    private List<KnowHowSubCategory> subCategories;
+    private List<SubCategory> subCategories;
 
     public String getId() {
         return id;
@@ -24,11 +28,11 @@ public class KnowHowCategory {
         this.name = name;
     }
 
-    public List<KnowHowSubCategory> getSubCategories() {
+    public List<SubCategory> getSubCategories() {
         return subCategories;
     }
 
-    public void setSubCategories(List<KnowHowSubCategory> subCategories) {
+    public void setSubCategories(List<SubCategory> subCategories) {
         this.subCategories = subCategories;
     }
 }

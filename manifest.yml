@@ -1,5 +1,10 @@
 applications:
    - name: exex
      path: service/target/service.jar
-     memory: 256M
+     memory: 2G
+     disk_quota: 512M
      instances: 1
+     buildpacks:
+         - java_buildpack
+     env:
+         JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }, memory_calculator: { stack_threads: 25 } }'

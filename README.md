@@ -11,9 +11,7 @@ cf api api.eu-gb.cf.cloud.ibm.com --skip-ssl-validation
 
 Login:
 
-cf login
-
-Enter the credentials
+cf login -u your_email -p your_password -o expertexchange -s dev
 
 Now you can push from the main directory with
 

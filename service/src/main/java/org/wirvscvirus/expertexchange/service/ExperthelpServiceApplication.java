@@ -1,13 +1,13 @@
-package org.wirvsvirus.experthelp;
+package org.wirvscvirus.expertexchange.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ExperthelpApplication {
+public class ExperthelpServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ExperthelpApplication.class, args);
+		SpringApplication.run(ExperthelpServiceApplication.class, args);
 	}
 
 }

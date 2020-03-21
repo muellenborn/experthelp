@@ -7,6 +7,7 @@ create table if not exists companies (
     industry varchar(200),          -- Branche
     street varchar(200),            -- Straße
     city varchar(25),               -- Stadt
+    zip_code varchar(5),            -- PLZ
     region varchar(25),             -- Region
     webpage varchar(100),           -- Webseite
     email varchar(100),             -- Email Adresse

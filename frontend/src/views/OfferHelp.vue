@@ -3,10 +3,10 @@
         <v-container class="py-8 d-flex align-center justify-center">
             <v-row>
                 <v-col cols="12">
-                    <h2>Ich biete</h2>
+                    <h2>Biete Ressourcen</h2>
                     <p>
-                        Danke, dass Sie Ihre Unterstützung anbieten.<br />
-                        Im folgenden haben Sie die Möglichkeit die Art Ihrer Hilfeleistung genauer zu beschreiben.
+                        Danke, dass Du Deine Unterstützung anbietest.<br />
+                        Im Folgenden hast Du die Möglichkeit die Art Deiner Hilfeleistung genauer zu beschreiben.
                     </p>
                     <v-card class="pa-12">
                         <transition name="slide-right">

@@ -2,9 +2,12 @@
     <v-app class="hackathon">
         <v-app-bar app color="tertiary" prominent elevate-on-scroll>
             <v-container fill-height class="d-flex align-center justify-space-between">
-                <h2 class="primary">LOGO HIERHIN</h2>
+                <logo-svg class="headerLogo" />
                 <div class="d-flex">
-                    <v-btn text x-large class="mr-2">
+                    <v-btn text x-large class="-primary">
+                        Wie funktionierts?
+                    </v-btn>
+                    <v-btn text x-large class="mr-2 -primary">
                         Anmelden
                     </v-btn>
                     <v-btn color="secondary" depressed x-large>
@@ -20,7 +23,7 @@
             <v-container>
                 <v-row>
                     <v-col cols="12" md="3" class="footer__col -rightBorder d-flex align-center row">
-                        <h1>Logo</h1>
+                        <logo-svg class="footer__logo" />
                         <p>Eine Initiative von <b>#wirvsvirus</b></p>
                     </v-col>
                     <v-col cols="12" md="2">
@@ -62,10 +65,11 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import { routeNames } from '@/constants/routeNames';
+import LogoSvg from '@/components/logoSvg.vue';
 
 @Component({
     name: routeNames.APP,
-    components: {},
+    components: { LogoSvg },
 })
 export default class extends Vue {}
 </script>
@@ -73,7 +77,14 @@ export default class extends Vue {}
 <style lang="scss">
 @import '../src/scss/variable';
 @import '../src/scss/globals';
+.headerLogo {
+    height: 100%;
+    width: auto;
+}
 .footer {
+    &__logo {
+        height: 90px;
+    }
     &__col {
         position: relative;
         &.-rightBorder {

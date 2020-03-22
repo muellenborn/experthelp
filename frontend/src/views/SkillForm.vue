@@ -1,6 +1,6 @@
 <template>
     <v-form v-model="skillForm.valid" class="offerHelp__form">
-        <h3>Wodurch kannst du unterstützen?</h3>
+        <h3>Wodurch kannst Du unterstützen?</h3>
         <v-container>
             <v-row>
                 <v-col cols="12" md="12">
@@ -15,7 +15,7 @@
                         :search-input.sync="search"
                         hide-selected
                         hint="Maximal 5 Fähigkeiten"
-                        label="Bitte füge deine Fähigkeiten hier ein"
+                        label="Bitte füge Deine Fähigkeiten hier ein"
                         multiple
                         persistent-hint
                         small-chips

@@ -1,6 +1,6 @@
 <template>
     <v-form v-model="contactForm.valid" class="offerHelp__form">
-        <h2>Ihre Kontaktdaten</h2>
+        <h2>Deine Kontaktdaten</h2>
         <v-container>
             <v-row>
                 <v-col cols="12" md="4">
@@ -43,7 +43,7 @@
         </v-container>
         <v-row class="justify-end">
             <v-btn :disabled="!contactForm.valid" color="primary" depressed rounded x-large class="ma-2" :to="{ name: routeNames.OFFER_HELP.SKILL_FORM }">
-                Nächster Schritt<v-icon>mdi-chevron-right</v-icon>
+                nächster Schritt<v-icon>mdi-chevron-right</v-icon>
             </v-btn>
         </v-row>
     </v-form>

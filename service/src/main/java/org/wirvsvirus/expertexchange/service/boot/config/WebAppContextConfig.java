@@ -10,7 +10,6 @@ import org.springframework.boot.autoconfigure.web.servlet.DispatcherServletRegis
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.filter.CharacterEncodingFilter;
@@ -21,11 +20,10 @@ import org.springframework.web.servlet.DispatcherServlet;
  * @author bahlef
  */
 @Configuration
-@ComponentScan(basePackages = "org.wirvscvirus.expertexchange")
 public class WebAppContextConfig {
 	@Bean
 	public DispatcherServletRegistrationBean dispatcherServletRegistration(WebApplicationContext context) {
-		DispatcherServletRegistrationBean registration = new DispatcherServletRegistrationBean(new DispatcherServlet(context), "/api/*");
+		DispatcherServletRegistrationBean registration = new DispatcherServletRegistrationBean(new DispatcherServlet(context), "/*");
 		registration.addInitParameter("contextConfigLocation", "classpath*:spring/applicationContext.xml");
 		registration.setLoadOnStartup(1);
 		registration.setName("dispatcherServlet");

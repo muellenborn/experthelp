@@ -1,9 +1,3 @@
 health:
   config:
     enabled: false
-spring:
-  cloud:
-    config:
-      enabled: false
-      label: expert-exchange
-      name: expert-exchange-service

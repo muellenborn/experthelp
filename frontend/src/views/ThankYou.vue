@@ -14,7 +14,7 @@
                         <thank-you-svg />
                     </v-row>
                     <v-row class="justify-center">
-                        <v-btn color="secondary" depressed rounded x-large class="ma-2" :to="{ name: routeNames.LANDING_PAGE }">
+                        <v-btn color="secondary" depressed rounded x-large class="ma-2" :to="{ name: routeNames.MAP }">
                             <v-icon>mdi-map</v-icon>
                             Karte anzeigen
                         </v-btn>

@@ -5,8 +5,8 @@ import { OfferHelpRouteNames, RouteNames } from '@/interfaces/RouteNames';
  * Declares route names for offerHelp.
  */
 export const offerHelpRouteNames: OfferHelpRouteNames = {
-    MAIN: 'offerHelp',
     CONTACT_FORM: 'contactForm',
+    MAIN: 'offerHelp',
     SKILL_FORM: 'skillForm',
 };
 
@@ -16,7 +16,10 @@ export const offerHelpRouteNames: OfferHelpRouteNames = {
  */
 export const routeNames: RouteNames = {
     APP: 'App',
+    IMPRESS: 'impress',
     LANDING_PAGE: 'LandingPage',
-    THANK_YOU: 'thankYou',
+    MAP: 'map',
     OFFER_HELP: offerHelpRouteNames,
+    TEAM: 'team',
+    THANK_YOU: 'thankYou',
 };

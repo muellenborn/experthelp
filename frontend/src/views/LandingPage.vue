@@ -14,12 +14,18 @@
                             Für Dich. Für Uns. Für Deutschland.
                         </b>
                         <div class="py-8">
-                            <v-btn class="mr-8 -primary" color="secondary" depressed x-large>
-                                Ich benötige Ressourcen
-                            </v-btn>
-                            <v-btn color="secondary" depressed x-large outlined :to="{ name: routeNames.OFFER_HELP.CONTACT_FORM }">
-                                Ich biete Ressourcen
-                            </v-btn>
+                            <v-row>
+                                <v-col cols="12" md="5">
+                                    <v-btn class="-primary" color="secondary" depressed x-large width="100%">
+                                        Ich benötige Ressourcen
+                                    </v-btn>
+                                </v-col>
+                                <v-col cols="12" md="4">
+                                    <v-btn color="secondary" depressed x-large outlined :to="{ name: routeNames.OFFER_HELP.CONTACT_FORM }" width="100%">
+                                        Ich biete Ressourcen
+                                    </v-btn>
+                                </v-col>
+                            </v-row>
                         </div>
                     </v-col>
                     <v-col cols="12" md="4" class="d-flex align-center justify-center">

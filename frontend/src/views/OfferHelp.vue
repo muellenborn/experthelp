@@ -3,12 +3,14 @@
         <v-container class="py-8 d-flex align-center justify-center">
             <v-row>
                 <v-col cols="12">
-                    <h2>Biete Ressourcen</h2>
-                    <p>
-                        Danke, dass Du Deine Unterstützung anbietest.<br />
-                        Im Folgenden hast Du die Möglichkeit die Art Deiner Hilfeleistung genauer zu beschreiben.
-                    </p>
-                    <v-card class="pa-12">
+                    <v-container>
+                        <h2>Biete Ressourcen</h2>
+                        <p>
+                            Danke, dass Du Deine Unterstützung anbietest.<br />
+                            Im Folgenden hast Du die Möglichkeit die Art Deiner Hilfeleistung genauer zu beschreiben.
+                        </p>
+                    </v-container>
+                    <v-card class="pa-sm-12 pa-3">
                         <transition name="slide-right">
                             <router-view />
                         </transition>

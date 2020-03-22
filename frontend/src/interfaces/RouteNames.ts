@@ -4,8 +4,8 @@
  */
 
 export interface OfferHelpRouteNames {
-    MAIN: string;
     CONTACT_FORM: string;
+    MAIN: string;
     SKILL_FORM: string;
     [key: string]: any;
 }
@@ -16,7 +16,10 @@ export interface OfferHelpRouteNames {
  */
 export interface RouteNames {
     APP: string;
+    IMPRESS: string;
     LANDING_PAGE: string,
-    THANK_YOU: string;
+    MAP: string;
     OFFER_HELP: OfferHelpRouteNames,
+    TEAM: string;
+    THANK_YOU: string;
 }

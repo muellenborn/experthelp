@@ -11,6 +11,6 @@
 
 	<artifactId>frontend</artifactId>
 	<description>frontend module</description>
-	<!-- TODO!!! -->
+	<!-- TODO!!! maven-frontend-plugin muss hier hin. -->
 	<packaging>pom</packaging>
 </project>

@@ -1,0 +1,17 @@
+.hackathon {
+    .container {
+        max-width: 1200px;
+    }
+
+    .-primary {
+        color: $primary;
+    }
+
+    .-secondary {
+        color: $secondary;
+    }
+
+    .-tertiary {
+        color: $tertiary;
+    }
+}

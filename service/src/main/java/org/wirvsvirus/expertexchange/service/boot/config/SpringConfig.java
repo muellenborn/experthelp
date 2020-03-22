@@ -6,11 +6,15 @@ import java.util.concurrent.Executor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.web.servlet.error.DefaultErrorAttributes;
 import org.springframework.boot.web.servlet.error.ErrorAttributes;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.http.CacheControl;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.ByteArrayHttpMessageConverter;
@@ -36,11 +40,25 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.wirvsvirus.expertexchange.service.model.KnowHow;
+import org.wirvsvirus.expertexchange.service.repositories.KnowHowCategoryRepository;
+import org.wirvsvirus.expertexchange.service.srv.IMetadataService;
+import org.wirvsvirus.expertexchange.service.srv.MetadataService;
 
 @Configuration
 @EnableAsync
 @EnableScheduling
+@EnableAutoConfiguration
+@EnableJpaRepositories("org.wirvsvirus.expertexchange.service.repositories")
 @EnableAspectJAutoProxy(proxyTargetClass = true)
+@ComponentScan(basePackages = {
+		"org.wirvsvirus.expertexchange.service.boot",
+		"org.wirvsvirus.expertexchange.service.boot.config",
+		"org.wirvsvirus.expertexchange.service.repositories",
+		"org.wirvsvirus.expertexchange.service.controller",
+		"org.wirvsvirus.expertexchange.service.model",
+		"org.wirvsvirus.expertexchange.service.srv"
+})
 public class SpringConfig implements WebMvcConfigurer, SchedulingConfigurer {
 	private static final Logger log = LoggerFactory.getLogger(SpringConfig.class);
 
@@ -141,6 +159,12 @@ public class SpringConfig implements WebMvcConfigurer, SchedulingConfigurer {
 
 		return objectMapper;
 	}
+
+	@Autowired
+	KnowHowCategoryRepository knowHowCategoryRepository;
+
+	@Autowired
+	MetadataService metadataService;
 
 	@Bean
 	public ErrorAttributes errorAttributes() {

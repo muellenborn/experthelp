@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.wirvsvirus.expertexchange.service.model.KnowhowCategory;
 import org.wirvsvirus.expertexchange.service.repositories.KnowHowCategoryRepository;
+import org.wirvsvirus.expertexchange.service.srv.IMetadataService;
+import org.wirvsvirus.expertexchange.service.srv.MetadataService;
 
 import java.util.List;
 import java.util.Optional;
@@ -19,13 +21,13 @@ import java.util.Optional;
 public class OfferingController {
 
     @Autowired
-    KnowHowCategoryRepository knowHowCategoryRepository;
+    private MetadataService metadataService;
 
     @GetMapping(value = "/categories", produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(value = "Documentation goes here", notes = "And you can also add notes")
     public ResponseEntity<?> getCategories() {
 
-        List<KnowhowCategory> knowhowCategories = knowHowCategoryRepository.findAll();
+        List<KnowhowCategory> knowhowCategories = metadataService.findAll();
 
         if (!knowhowCategories.isEmpty()) {
             return ResponseEntity.of(Optional.of(knowhowCategories.get(0)));

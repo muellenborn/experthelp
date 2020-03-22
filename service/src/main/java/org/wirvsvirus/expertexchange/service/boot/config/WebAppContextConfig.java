@@ -23,7 +23,7 @@ import org.springframework.web.servlet.DispatcherServlet;
 public class WebAppContextConfig {
 	@Bean
 	public DispatcherServletRegistrationBean dispatcherServletRegistration(WebApplicationContext context) {
-		DispatcherServletRegistrationBean registration = new DispatcherServletRegistrationBean(new DispatcherServlet(context), "/api/*");
+		DispatcherServletRegistrationBean registration = new DispatcherServletRegistrationBean(new DispatcherServlet(context), "/*");
 		registration.addInitParameter("contextConfigLocation", "classpath*:spring/applicationContext.xml");
 		registration.setLoadOnStartup(1);
 		registration.setName("dispatcherServlet");

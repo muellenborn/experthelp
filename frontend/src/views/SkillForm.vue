@@ -22,11 +22,6 @@
             </v-row>
             <v-row>
                 <v-col cols="12" md="12">
-                    <v-text-field v-model="skillForm.name" label="Name" outlined hide-details="auto" :rules="nameRules" required />
-                </v-col>
-            </v-row>
-            <v-row>
-                <v-col cols="12" md="12">
                     <v-combobox
                         v-model="skillForm.skillsArray"
                         :items="skillsArray"

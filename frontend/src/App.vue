@@ -83,6 +83,7 @@ export default class extends Vue {}
 .footer {
     &__logo {
         height: 100%;
+        width: 100%;
         margin-right: 20px;
     }
     &__col {

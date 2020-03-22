@@ -60,12 +60,11 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import { Component } from 'vue-property-decorator';
-import { RouteNames } from '@/constants/routeNames.enum';
+import { Vue, Component } from 'vue-property-decorator';
+import { routeNames } from '@/constants/routeNames';
 
 @Component({
-    name: RouteNames.App,
+    name: routeNames.APP,
     components: {},
 })
 export default class extends Vue {}

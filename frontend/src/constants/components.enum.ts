@@ -3,5 +3,6 @@
  * Declares available component names.
  */
 export enum Components {
-    LandingpageCard = 'LandingpageCard',
+    LandingPageCard = 'LandingPageCard',
+    ThankYouSvg = 'ThankYouSvg',
 }

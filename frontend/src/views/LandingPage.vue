@@ -1,6 +1,6 @@
 <template>
-    <div class="landingpage">
-        <div class="landingpage__row -first -tertiary secondary">
+    <div class="landingPage">
+        <div class="landingPage__row -first -tertiary secondary">
             <v-container class="py-8">
                 <v-row>
                     <v-col cols="12" md="8">
@@ -17,7 +17,7 @@
                             <v-btn class="mr-8" color="primary" depressed x-large>
                                 Ich benötige Resourcen
                             </v-btn>
-                            <v-btn color="primary" depressed x-large outlined :to="{ path: RouteNames.OfferHelp }">
+                            <v-btn color="primary" depressed x-large outlined :to="{ name: routeNames.OFFER_HELP.CONTACT_FORM }">
                                 Ich biete Resourcen
                             </v-btn>
                         </div>
@@ -33,22 +33,22 @@
                 </v-row>
             </v-container>
         </div>
-        <div class="landingpage__row -second">
+        <div class="landingPage__row -second">
             <v-container class="py-8">
                 <v-row class="justify-center">
                     <v-col cols="12" md="5">
-                        <landingpage-card :data="card1" />
+                        <landingPage-card :data="card1" />
                     </v-col>
                     <v-col cols="12" md="5">
-                        <landingpage-card :data="card2" />
+                        <landingPage-card :data="card2" />
                     </v-col>
                 </v-row>
             </v-container>
         </div>
-        <div class="landingpage__row -third d-flex justify-center align-center">
+        <div class="landingPage__row -third d-flex justify-center align-center">
             <h1>tbd</h1>
         </div>
-        <div class="landingpage__row -fourth">
+        <div class="landingPage__row -fourth">
             <v-container class="py-8">
                 <v-row class="d-flex justify-center -primary">
                     <h2>Oft gestellte Fragen</h2>
@@ -71,17 +71,16 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import { Component } from 'vue-property-decorator';
-import { RouteNames } from '@/constants/routeNames.enum';
-import LandingpageCard from '@/components/landingpageCard.vue';
+import { Vue, Component } from 'vue-property-decorator';
+import LandingPageCard from '@/components/landingPageCard.vue';
+import { routeNames } from '@/constants/routeNames';
 
 @Component({
-    name: RouteNames.Landingpage,
-    components: { LandingpageCard },
+    name: routeNames.LANDING_PAGE,
+    components: { LandingPageCard },
 })
 export default class extends Vue {
-    private RouteNames = RouteNames;
+    private routeNames = routeNames;
     private card1 = {
         headline: 'Als Unternehmen',
         texts: [
@@ -119,7 +118,7 @@ export default class extends Vue {
 </script>
 
 <style scoped lang="scss">
-.landingpage {
+.landingPage {
     &__row {
         &.-first {
             align-items: center;

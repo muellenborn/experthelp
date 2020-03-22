@@ -16,12 +16,11 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import { Component, Prop } from 'vue-property-decorator';
+import { Vue, Component, Prop } from 'vue-property-decorator';
 import { Components } from '@/constants/components.enum';
 
 @Component({
-    name: Components.LandingpageCard,
+    name: Components.LandingPageCard,
     components: {},
 })
 export default class extends Vue {

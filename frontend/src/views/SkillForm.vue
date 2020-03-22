@@ -2,6 +2,24 @@
     <v-form v-model="skillForm.valid" class="offerHelp__form">
         <h3>Wodurch kannst Du unterstützen?</h3>
         <v-container>
+            <v-radio-group v-model="skillForm.type">
+                <v-row>
+                    <v-col cols="12" md="4">
+                        <v-radio :label="`mich selber`" value="self" />
+                    </v-col>
+                    <v-col cols="12" md="4">
+                        <v-radio :label="`meine Mitarbeiter:innen`" value="coworker" />
+                    </v-col>
+                    <v-col cols="12" md="4">
+                        <v-radio :label="`Ressourcen`" value="ressources" />
+                    </v-col>
+                </v-row>
+            </v-radio-group>
+            <v-row>
+                <v-col cols="12" md="12">
+                    <v-text-field v-model="skillForm.name" label="Name" outlined hide-details="auto" :rules="nameRules" required />
+                </v-col>
+            </v-row>
             <v-row>
                 <v-col cols="12" md="12">
                     <v-text-field v-model="skillForm.name" label="Name" outlined hide-details="auto" :rules="nameRules" required />

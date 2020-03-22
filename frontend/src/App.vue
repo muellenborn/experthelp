@@ -24,7 +24,6 @@
                 <v-row>
                     <v-col cols="12" md="3" class="footer__col -rightBorder d-flex align-center row">
                         <logo-svg class="footer__logo" />
-                        <p>Eine Initiative von <b>#wirvsvirus</b></p>
                     </v-col>
                     <v-col cols="12" md="2">
                         <p class="mb-3"><b>Projektname</b></p>
@@ -83,7 +82,8 @@ export default class extends Vue {}
 }
 .footer {
     &__logo {
-        height: 90px;
+        height: 100%;
+        margin-right: 20px;
     }
     &__col {
         position: relative;

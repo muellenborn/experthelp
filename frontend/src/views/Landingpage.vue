@@ -17,7 +17,7 @@
                             <v-btn class="mr-8" color="primary" depressed x-large>
                                 Ich benötige Resourcen
                             </v-btn>
-                            <v-btn color="primary" depressed x-large outlined>
+                            <v-btn color="primary" depressed x-large outlined :to="{ path: RouteNames.OfferHelp }">
                                 Ich biete Resourcen
                             </v-btn>
                         </div>
@@ -25,7 +25,9 @@
                     <v-col cols="12" md="4" class="d-flex align-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
                             <rect fill="#ddd" width="400" height="400" />
-                            <text fill="rgba(0,0,0,0.5)" font-family="sans-serif" font-size="30" dy="10.5" font-weight="bold" x="50%" y="50%" text-anchor="middle">300×400</text>
+                            <text fill="rgba(0,0,0,0.5)" font-family="sans-serif" font-size="30" dy="10.5" font-weight="bold" x="50%" y="50%" text-anchor="middle">
+                                300×400
+                            </text>
                         </svg>
                     </v-col>
                 </v-row>
@@ -79,6 +81,7 @@ import LandingpageCard from '@/components/landingpageCard.vue';
     components: { LandingpageCard },
 })
 export default class extends Vue {
+    private RouteNames = RouteNames;
     private card1 = {
         headline: 'Als Unternehmen',
         texts: [

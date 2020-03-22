@@ -5,4 +5,5 @@
 export enum RouteNames {
     App = 'App',
     Landingpage = 'Landingpage',
+    OfferHelp = 'OfferHelp',
 }

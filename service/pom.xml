@@ -123,7 +123,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>org.wirvscvirus.expertexchange.service.boot.AppInitializer</mainClass>
+					<mainClass>org.wirvsvirus.expertexchange.service.boot.AppInitializer</mainClass>
 				</configuration>
 				<executions>
 					<execution>

@@ -14,21 +14,22 @@
                             Für Dich. Für Uns. Für Deutschland.
                         </b>
                         <div class="py-8">
-                            <v-btn class="mr-8" color="primary" depressed x-large>
-                                Ich benötige Resourcen
-                            </v-btn>
-                            <v-btn color="primary" depressed x-large outlined :to="{ name: routeNames.OFFER_HELP.CONTACT_FORM }">
-                                Ich biete Resourcen
-                            </v-btn>
+                            <v-row>
+                                <v-col cols="12" md="5">
+                                    <v-btn class="-primary" color="secondary" depressed x-large width="100%">
+                                        Ich benötige Ressourcen
+                                    </v-btn>
+                                </v-col>
+                                <v-col cols="12" md="4">
+                                    <v-btn color="secondary" depressed x-large outlined :to="{ name: routeNames.OFFER_HELP.CONTACT_FORM }" width="100%">
+                                        Ich biete Ressourcen
+                                    </v-btn>
+                                </v-col>
+                            </v-row>
                         </div>
                     </v-col>
                     <v-col cols="12" md="4" class="d-flex align-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
-                            <rect fill="#ddd" width="400" height="400" />
-                            <text fill="rgba(0,0,0,0.5)" font-family="sans-serif" font-size="30" dy="10.5" font-weight="bold" x="50%" y="50%" text-anchor="middle">
-                                300×400
-                            </text>
-                        </svg>
+                        <apply-svg />
                     </v-col>
                 </v-row>
             </v-container>
@@ -46,11 +47,13 @@
             </v-container>
         </div>
         <div class="landingPage__row -third d-flex justify-center align-center">
-            <h1>tbd</h1>
+            <v-container class="py-8">
+                <v-img src="/img/slider1.png" contain />
+            </v-container>
         </div>
         <div class="landingPage__row -fourth">
             <v-container class="py-8">
-                <v-row class="d-flex justify-center -primary">
+                <v-row class="d-flex justify-center -primary py-6">
                     <h2>Oft gestellte Fragen</h2>
                 </v-row>
                 <v-row class="justify-center">
@@ -65,6 +68,17 @@
                         </v-card>
                     </v-col>
                 </v-row>
+                <v-row class="d-flex justify-center -secondary pt-12">
+                    <h3>Noch Fragen?</h3>
+                </v-row>
+                <v-row class="d-flex justify-center -secondary  py-6">
+                    <v-btn class="mr-8 -primary" color="secondary" depressed x-large>
+                        FAQ lesen
+                    </v-btn>
+                    <v-btn color="secondary" depressed x-large outlined>
+                        Kontaktier uns
+                    </v-btn>
+                </v-row>
             </v-container>
         </div>
     </div>
@@ -74,26 +88,29 @@
 import { Vue, Component } from 'vue-property-decorator';
 import LandingPageCard from '@/components/landingPageCard.vue';
 import { routeNames } from '@/constants/routeNames';
+import ApplySvg from '@/components/applySvg.vue';
 
 @Component({
     name: routeNames.LANDING_PAGE,
-    components: { LandingPageCard },
+    components: { ApplySvg, LandingPageCard },
 })
 export default class extends Vue {
     private routeNames = routeNames;
     private card1 = {
+        svg: 'company',
         headline: 'Als Unternehmen',
         texts: [
-            'Mitarbeiter werden für sinnvolle Arbeiten eingesetzt und ungenutzte Maschinenkapazität wird bereitgestellt. Als Unternehmen haben Sie die Möglichkeit Umsätze zu generieren und laufende Kosten zu decken.',
-            'Zudem leisten Sie soziales Engagement, wo es am dringendsten benötigt wird.',
+            'Mitarbeiter werden für sinnvolle Arbeiten eingesetzt und ungenutzte Maschinenkapazität wird bereitgestellt. Als Unternehmen hast Du die Möglichkeit Umsätze zu generieren und laufende Kosten zu decken.',
+            'Zudem leistest Du soziales Engagement, wo es am dringendsten benötigt wird.\n',
         ],
     };
 
     private card2 = {
+        svg: 'worker',
         headline: 'Als Fachkraft',
         texts: [
-            'In schweren Zeiten haben Sie mit unserem Produkt die Möglichkeit mit vielen suchenden Unternehmen in Kontakt zu treten.',
-            'So können Sie von Ihrem know-how gebrauch machen um auch in Zeiten von Arbeitslosigkeit oder Kurzarbeit liquide zu bleiben',
+            'In schweren Zeiten hast Du mit unserem Produkt die Möglichkeit mit vielen suchenden Unternehmen in Kontakt zu treten.',
+            'So kannst Du von Deinem Know-how Gebrauch machen um auch in Zeiten von Arbeitslosigkeit oder Kurzarbeit liquide zu bleiben',
         ],
     };
 
@@ -101,17 +118,17 @@ export default class extends Vue {
         {
             headline: 'Sind die Gesuche und Angebote immer aktuell?',
             text:
-                'Bei jedem Eintrag siehst du direkt wann es erstellt und wann es zuletzt geändert wurde. Die meisten unserer Nutzer reagieren untertags innerhalb von 2 Stunden. Gesuche, die 48 Stunden nicht aktualisiert wurden, werden entsprechend markiert und per Mail informiert.',
+                'Bei jedem Eintrag siehst Du direkt wann es erstellt und wann es zuletzt geändert wurde. Die meisten unserer Nutzer reagieren untertags innerhalb von zwei Stunden. Gesuche, die 48 Stunden nicht aktualisiert wurden, werden entsprechend markiert und der Ersteller per Mail informiert.',
         },
         {
             headline: 'Wie schnell können die Fachkräfte bei mir sein?',
             text:
-                'Die meisten Anbieter, egal ob Unternehmen oder Fachkraft, haben sofortige Verfügbarkeit, d.h. sobald ihr euch über die Vorraussetzungen, wie Maschine, Ort, Haftung und ggf. Vergütung einig seid, könnt ihr loslegen. Erfahrungsgemäß geht das innerhalb weniger Stunden nach der ersten Kontaktaufnahme.',
+                'Die meisten Anbieter, egal ob Unternehmen oder Fachkraft, haben sofortige Verfügbarkeit, das heißt sobald ihr euch über die Voraussetzungen, wie Maschine, Ort, Haftung und gegebenenfalls Vergütung einig seid, könnt ihr loslegen. Erfahrungsgemäß geht das innerhalb weniger Stunden nach der ersten Kontaktaufnahme.',
         },
         {
             headline: 'Was kostet mich das?',
             text:
-                'Unsere Plattform wird als gemeinnützige Olattform betrieben und finanziert sich bisher aus Spenden. Die Vermittlung selbst ist komplett kostenfrei. Für die in Anspruch genommenen Facharbeiten liegt es an Anbieter und Suchenden eine für beide Seiten faire Lösung zu finden. Tipp von uns: das muss nicht immer Geld sein! Eine Selbstständiger, der aufgrund der Corona-Krise derzeit kein Einkommen hat, kann derzeit vielleicht genauso gut Lebensmittel transportieren.',
+                'Unsere Plattform wird als gemeinnützige Plattform betrieben und finanziert sich bisher aus Spenden. Die Vermittlung selbst ist komplett kostenfrei. Für die in Anspruch genommenen Facharbeiten liegt es an Anbieter und Suchendem eine für beide Seiten faire Lösung zu finden. Tipp von uns: Das muss nicht immer Geld sein! ',
         },
     ];
 }
@@ -126,6 +143,7 @@ export default class extends Vue {
             justify-content: space-between;
             width: 100%;
             font-size: $textBig;
+            background: transparent linear-gradient(160deg, #4ecdc4 0%, #69f0ae 100%) 0% 0% no-repeat padding-box;
         }
 
         &.-third {

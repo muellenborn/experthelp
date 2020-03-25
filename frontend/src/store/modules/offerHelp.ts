@@ -18,6 +18,7 @@ export default class UserStore extends VuexModule {
             dateTo: new Date().toISOString().substr(0, 10),
             dateFrom: new Date().toISOString().substr(0, 10),
             valid: false,
+            type: false,
         },
     };
 

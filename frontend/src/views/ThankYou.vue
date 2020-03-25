@@ -6,7 +6,7 @@
                     <v-row class="d-flex flex-column justify-center">
                         <h1 class="d-flex justify-center">Vielen Dank!</h1>
                         <p class="d-flex justify-center">
-                            Dein Inserat wurde gespeichert und dein Unternehmen ist jetzt Teil unserer Community!<br />
+                            Dein Inserat wurde gespeichert und Dein Unternehmen ist jetzt Teil unserer Community!<br />
                             Fang doch jetzt schon an bei uns auf der Karte nach geeigneten Inseraten zu suchen.
                         </p>
                     </v-row>
@@ -14,7 +14,7 @@
                         <thank-you-svg />
                     </v-row>
                     <v-row class="justify-center">
-                        <v-btn color="secondary" depressed rounded x-large class="ma-2" :to="{ name: routeNames.LANDING_PAGE }">
+                        <v-btn color="secondary" depressed rounded x-large class="ma-2" :to="{ name: routeNames.MAP }">
                             <v-icon>mdi-map</v-icon>
                             Karte anzeigen
                         </v-btn>

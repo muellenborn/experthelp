@@ -4,14 +4,14 @@
     }
 
     .-primary {
-        color: $primary;
+        color: $primary !important;
     }
 
     .-secondary {
-        color: $secondary;
+        color: $secondary !important;
     }
 
     .-tertiary {
-        color: $tertiary;
+        color: $tertiary !important;
     }
 }
